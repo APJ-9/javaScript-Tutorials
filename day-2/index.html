@@ -9,12 +9,14 @@
 </head>
 
 <body>
-    <div class="container">
-        <h2>Light the bulb</h2>
-        <button onclick='document.getElementById("myImage").src="https://www.w3schools.com/js/pic_bulbon.gif"'>Turn on
+    <h2 style="text-align: center;">Light the bulb</h2>
+    <div class="container" style="display: flex;flex-direction: row; justify-content: center;">
+        <button onclick='document.getElementById("myImage").src="https://www.w3schools.com/js/pic_bulbon.gif"'
+            style="margin-right: 100px;">Turn on
             the Light </button>
         <img src="https://www.w3schools.com/js/pic_bulboff.gif" alt="" id="myImage" style="width: 100px;">
-        <button onclick='document.getElementById("myImage").src="https://www.w3schools.com/js/pic_bulboff.gif"'>Turn on
+        <button onclick='document.getElementById("myImage").src="https://www.w3schools.com/js/pic_bulboff.gif"'
+            style="margin-left: 100px;">Turn off
             the Light </button>
     </div>
 </body>
