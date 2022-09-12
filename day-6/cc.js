@@ -23,5 +23,5 @@ function cc(card) {
     return count + ' ' + holdbet;
 }
 
-cc(2); cc(3); cc(7); cc('K'); cc('A');
+cc(2); cc(3);cc(2); cc(3); cc(7); cc('K'); cc('K'); cc('K'); cc('K'); cc('K'); cc('A');
 console.log(cc(4));
