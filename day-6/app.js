@@ -67,15 +67,15 @@ console.log(ourDog);
 
 //Testing Objects for properties
 var myObj = {
-    'gift' : 'pony',
-    'pet' : 'kitten',
-    'bed' : 'sleigh'
+    'gift': 'pony',
+    'pet': 'kitten',
+    'bed': 'sleigh'
 };
 
-function checkObj (checkProp){
-    if(myObj.hasOwnProperty(checkProp)){
+function checkObj(checkProp) {
+    if (myObj.hasOwnProperty(checkProp)) {
         return myObj[checkProp];
-    } else{
+    } else {
         return 'Not found';
     }
 }
@@ -86,18 +86,18 @@ console.log(checkObj('giftx'));
 //Manipulating Complex Objects
 var myMusic = [
     {
-        'artist' : 'Billy Joel',
-        'title' : 'Piano Man',
-        'release_year' : 1973,
-        'formats' : ['CD','8T','LP'],
-        'gold' : true
+        'artist': 'Billy Joel',
+        'title': 'Piano Man',
+        'release_year': 1973,
+        'formats': ['CD', '8T', 'LP'],
+        'gold': true
     },
     {
-        'artist' : 'Beau Carnes',
-        'title' : 'Cereal man',
-        'release_year' : 2003,
-        'formats' : ['CD','8T','YOuTube Video'],
-        'gold' : true
+        'artist': 'Beau Carnes',
+        'title': 'Cereal man',
+        'release_year': 2003,
+        'formats': ['CD', '8T', 'YOuTube Video'],
+        'gold': true
     }
 ];
 
@@ -105,14 +105,39 @@ var myMusic = [
 var myStorage = {
     'car': {
         'inside': {
-            'glove box':'maps',
-            'passenger seat' : 'crumbs'
+            'glove box': 'maps',
+            'passenger seat': 'crumbs'
         },
-        'outside' : {
-            'trunk' : 'jack'
+        'outside': {
+            'trunk': 'jack'
         }
     }
 };
 
 var gloveBoxContents = myStorage.car.inside['glove box'];
 console.log(gloveBoxContents);
+
+//Accessing Nestesd Arrays
+var myPlants = [
+    {
+        type: 'flower',
+        list: [
+            'rose',
+            'Tulip',
+            'Dandelion'
+        ]
+    },
+    {
+        type: 'trees',
+        list: [
+            'fir',
+            'pine',
+            ,'birch'
+        ]
+    }
+];
+console.log(myPlants);
+var secondTree = myPlants[1].list[1];
+console.log(secondTree);
+
+//Record Collection
