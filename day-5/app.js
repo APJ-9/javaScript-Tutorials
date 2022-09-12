@@ -11,3 +11,25 @@ var thisArray = [['John',23],['cat',2]];
 console.log(thisArray);
 
 //Manipulate Array with pop()
+var removedVar = ourArray.pop();
+console.log(ourArray);
+console.log(removedVar);
+
+//Manipulate Array with shift()
+//shift() --> used to remove 1st element from the array
+removedVar = ourArray.shift();
+console.log(ourArray);
+console.log(removedVar);
+
+//Manipulate Array with unshift()
+//similar to push() but insert at the front
+ourArray.unshift('Hello');
+console.log(ourArray);
+
+//Functions
+function ourFunction(){
+    console.log('hello world !');
+}
+ourFunction();
+
+//Passing Values to functions with arguments
