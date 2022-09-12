@@ -112,7 +112,8 @@ processed = processArg(7);
 console.log(processed);
 
 function nextInLine(arr,item){
-    return item;
+    arr.push(item);
+    return arr.shift();
 }
 
 var testArr = [1,2,3,4,5];
