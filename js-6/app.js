@@ -219,11 +219,73 @@ function ourRandomRangeNumber(ourMin, ourMax) {
     return Math.floor(Math.random() * (ourMax - ourMin + 1)) + ourMin;
 }
 
-console.log(ourRandomRangeNumber(2,15));
+console.log(ourRandomRangeNumber(2, 15));
 
 //Use the parseInt function
-function convertToInteger(str){
+function convertToInteger(str) {
     return parseInt(str);
 }
 console.log(convertToInteger('56'));
 //convert string to integer
+
+//use the parseint function with a radix
+function convertToIntegerRadix(str) {
+    return parseInt(str, 2);
+}
+console.log(convertToIntegerRadix('111'));
+
+//Ternary Operator
+//syntax :  condition ? statement-if -true : statement-if-false;
+function checkEquals(a, b) {
+    return a === b ? true : false;
+    //    return a===b ;    //this line also returns the same result as above
+}
+console.log(checkEquals(2, 3));
+
+//Use Multiple conditional (Ternary) Operators
+function checkSign(num) {
+    return num > 0 ? 'positive' : num < 0 ? 'negative' : 'zero';
+}
+console.log(checkSign(10));
+
+//Scope of a variable using let and var
+function checkScope() {
+    "use strict";
+    let i = 'function scope';
+    if (true) {
+        let i = 'block scope';
+        console.log('inside block: '+i);
+    }
+    console.log('outside block: '+i);
+    return i;
+}
+checkScope();
+
+function checkScope1() {
+    "use strict";
+    // let i = 'function scope';
+    if (true) {
+        var i = 'block scope';
+        console.log('inside block: '+i);
+    }
+    //end of block and remaining of function scope
+    console.log('outside block: '+i);
+    //here the i can be accessed when we use var to define the variable
+    //result block scope prints 2 time
+    return i;
+}
+checkScope1();
+
+function checkScope2() {
+    "use strict";
+    // let cs2 = 'function scope';
+    if (true) {
+        let cs2 = 'block scope';
+        console.log('inside block: '+cs2);
+    }
+//    console.log('outside block: '+cs2);
+//returns an error // Uncaught ReferenceError: cs2 is not defined at checkScop2
+// we have defined the cs2 variable inside the if block and we are trying to access it from outside the if block which produce an reference error
+//   return cs2;
+}
+checkScope2();
