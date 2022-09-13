@@ -308,3 +308,23 @@ editInPlace();
 console.log(S);
 
 //Prevent Object Mutation
+function freezeObj(){
+    "use strict";
+    const MATH_CONSTANTS={
+        PI:3.14
+    };
+
+    Object.freeze(MATH_CONSTANTS);
+    //Object.freeze helps to freeze the object from updations and we can't change it anywhere in the program
+
+    try {
+        MATH_CONSTANTS.PI = 99;
+    } catch (ex) {
+        console.log(ex);
+    }
+    return MATH_CONSTANTS.PI;
+}
+
+const PI = freezeObj();
+console.log(PI);
+
