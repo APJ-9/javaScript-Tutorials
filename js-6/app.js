@@ -205,3 +205,6 @@ do {
 } while (i < 5)
 console.log(i,myArray);
 //According to the logic the array must be empty since i is greater then 5 but here we use do ... while loop the loop executes once so that the array gets the value
+
+//Generate Random Fractions
+console.log(Math.random());
