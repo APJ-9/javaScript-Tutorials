@@ -180,4 +180,28 @@ for (var j = 0; j < ourArray.length; j++) {
     ourTotal += ourArray[j];
 }
 console.log(ourTotal);
-console.log('hello');
+
+//Nesting for loops
+function multiplyAll(arr) {
+    var product = 1;
+    for (var i = 0; i < arr.length; i++) {
+        for (var j = 0; j < arr[i].length; j++) {
+            product *= arr[i][j];
+        }
+    }
+    return product;
+}
+
+var product = multiplyAll([[1, 2], [3, 4], [5, 6, 7]]);
+console.log(product);
+
+//Iterate with do while loops
+myArray = [];
+i = 10;
+
+do {
+    myArray.push(i);
+    i++;
+} while (i < 5)
+console.log(i,myArray);
+//According to the logic the array must be empty since i is greater then 5 but here we use do ... while loop the loop executes once so that the array gets the value
