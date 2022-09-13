@@ -260,9 +260,9 @@ function checkScope() {
     let i = 'function scope';
     if (true) {
         let i = 'block scope';
-        console.log('inside block: '+i);
+        console.log('inside block: ' + i);
     }
-    console.log('outside block: '+i);
+    console.log('outside block: ' + i);
     return i;
 }
 checkScope();
@@ -272,10 +272,10 @@ function checkScope1() {
     // let i = 'function scope';
     if (true) {
         var i = 'block scope';
-        console.log('inside block: '+i);
+        console.log('inside block: ' + i);
     }
     //end of block and remaining of function scope
-    console.log('outside block: '+i);
+    console.log('outside block: ' + i);
     //here the i can be accessed when we use var to define the variable
     //result block scope prints 2 time
     return i;
@@ -287,31 +287,31 @@ function checkScope2() {
     // let cs2 = 'function scope';//the variable i is used before so that using variable i is not a good way.
     if (true) {
         let cs2 = 'block scope';
-        console.log('inside block: '+cs2);
+        console.log('inside block: ' + cs2);
     }
-//    console.log('outside block: '+cs2);
-//returns an error // Uncaught ReferenceError: cs2 is not defined at checkScop2
-// we have defined the cs2 variable inside the if block and we are trying to access it from outside the if block which produce an reference error
-//   return cs2;
+    //    console.log('outside block: '+cs2);
+    //returns an error // Uncaught ReferenceError: cs2 is not defined at checkScop2
+    // we have defined the cs2 variable inside the if block and we are trying to access it from outside the if block which produce an reference error
+    //   return cs2;
 }
 checkScope2();
 
-const S = [5,7,2];
-function editInPlace(){
+const S = [5, 7, 2];
+function editInPlace() {
     // S = [2,5,7]; //We can not change it like this insted of that we use
-    S[0]=2;
-    S[1]=5;
-    S[2]=7;
+    S[0] = 2;
+    S[1] = 5;
+    S[2] = 7;
 }
 console.log(S);
 editInPlace();
 console.log(S);
 
 //Prevent Object Mutation
-function freezeObj(){
+function freezeObj() {
     "use strict";
-    const MATH_CONSTANTS={
-        PI:3.14
+    const MATH_CONSTANTS = {
+        PI: 3.14
     };
 
     Object.freeze(MATH_CONSTANTS);
@@ -328,3 +328,33 @@ function freezeObj(){
 const PI = freezeObj();
 console.log(PI);
 
+//Arrow Functions
+
+const magic = function () {
+    return new Date();
+}
+console.log(magic());
+
+const magic1 = () => {
+    return new Date();
+    //we don't need the function key word
+}
+console.log(magic1());
+
+const magic2 = () => new Date();
+//In magic2 we remove return statement and the curly brackets because there is only single return here. It is the most shortest form of an arrow function
+console.log(magic2());
+
+//Arrow functions with paramaters
+//converting the function to arrow function given below 
+var myConcat = function(arr1,arr2){
+    return arr1.concat(arr2);
+};
+
+console.log(myConcat([1,2],[3,4,5]));
+
+const myConcatArrow = (arr1,arr2) => arr1.concat(arr2);
+
+console.log(myConcatArrow([6,7],[8,9,10]));
+
+//Higher Order Arrow Functions
