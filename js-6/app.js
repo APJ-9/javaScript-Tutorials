@@ -368,7 +368,7 @@ const squareList = (arr) => {
 const squaredIntegers = squareList(realNumberArray);
 console.log(squaredIntegers);
 
-//Default parameters //Need to study well 
+//Default parameters //Need to study well // Immeditely invocked function
 const increment = (function () {
     return function increment(number, value = 0) {
         return number + value;
@@ -384,13 +384,74 @@ const sum = (function () {
         return args.reduce((a, b) => a + b, 0);
     };
 })();
-console.log(sum(1,2,3,4,5));
+console.log(sum(1, 2, 3, 4, 5));
 
 //Use the Spread Operator to evaluate arrays in-place
-const arr1 = ['JAN','FEB','MAR','APR','MAY'];
+const arr1 = ['JAN', 'FEB', 'MAR', 'APR', 'MAY'];
 let arr2;
-(function(){
-    arr2=[...arr1];
-    arr1[0]='potato';
+(function () {
+    arr2 = [...arr1];
+    arr1[0] = 'potato';
 })();
-console.log(arr2,arr1);
+console.log(arr2, arr1);
+
+//Use Destructuring Assignment to Assign Variables form Objects
+var voxel = { x: 3.6, y: 7.4, z: 6.54 };
+const { x: a, y: b, z: c } = voxel;
+console.log(a, b, c);
+
+const AVG_TEMP = {
+    today: 77.5,
+    tomorrow: 79
+};
+
+function getTempOfTmrw(avgTemperatures) {
+    "use strict"
+    const { tomorrow: tempOfTomorrow } = avgTemperatures;
+    return tempOfTomorrow;
+}
+
+console.log(getTempOfTmrw(AVG_TEMP));
+
+//Destructuring Assignment with nested objects
+const LOCAL_FORECAST = {
+    today: { min: 72, max: 83 },
+    tomorrow: { min: 73.3, max: 84.6 }
+};
+
+function getMaxOfTmrw(forecast) {
+    "use strict";
+    const { tomorrow: { max: maxOfTomorrow } } = forecast;
+    return maxOfTomorrow;
+}
+console.log(getMaxOfTmrw(LOCAL_FORECAST));
+
+//Use destructuring Assignment to assign variables from arrays
+const [z, x, , y] = [1, 2, 3, 4, 5, 6];
+console.log(z, x, y);
+//result z=1 and x=2 y=4
+
+let aa = 5, bb = 9;
+console.log(aa,bb);
+(()=>{
+    'use strict';
+    [aa,bb]=[bb,aa];
+})();
+console.log(aa,bb);
+
+//Use Destructuring Assignment with the rest operator
+const source = [1,2,3,4,5,6,7,8,9,10];
+function removeFrirstTwo(list){
+    const [,,...arr] = list;
+    return arr;
+}
+const arr =removeFrirstTwo(source);
+console.log(source);
+console.log(arr);
+
+//Use Destructuring Assignment to pass an object as a function's parameters
+const stats = {
+    max:56.78,
+    standard_devitation: 4.34,
+    median
+}
