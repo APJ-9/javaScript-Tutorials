@@ -347,14 +347,32 @@ console.log(magic2());
 
 //Arrow functions with paramaters
 //converting the function to arrow function given below 
-var myConcat = function(arr1,arr2){
+var myConcat = function (arr1, arr2) {
     return arr1.concat(arr2);
 };
 
-console.log(myConcat([1,2],[3,4,5]));
+console.log(myConcat([1, 2], [3, 4, 5]));
 
-const myConcatArrow = (arr1,arr2) => arr1.concat(arr2);
+const myConcatArrow = (arr1, arr2) => arr1.concat(arr2);
 
-console.log(myConcatArrow([6,7],[8,9,10]));
+console.log(myConcatArrow([6, 7], [8, 9, 10]));
 
 //Higher Order Arrow Functions
+const realNumberArray = [4, 5.6, -9.8, 3.14, 34, 5, 3.31, -90];
+
+const squareList = (arr) => {
+    const squaredIntegers = arr.filter(num => Number.isInteger(num) && num > 0).map(x => x * x);
+    return squaredIntegers;
+};
+
+const squaredIntegers = squareList(realNumberArray);
+console.log(squaredIntegers);
+
+//Default parameters
+const increment = (function () {
+    return function increment(number, value = 0) {
+        return number + value;
+    }
+})();
+console.log(increment(5, 9));
+console.log(increment(5));
