@@ -176,8 +176,8 @@ myArray = [];
 //Iterate through an array with a for loop
 var ourArray = [9, 10, 11, 12];
 var ourTotal = 0;
-for (var j = 0; j < ourArray.length; i++) {
-    ourTotal += ourArray[i];
+for (var j = 0; j < ourArray.length; j++) {
+    ourTotal += ourArray[j];
 }
 console.log(ourTotal);
 console.log('hello');
