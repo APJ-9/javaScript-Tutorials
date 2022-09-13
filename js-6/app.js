@@ -132,7 +132,7 @@ var myPlants = [
         list: [
             'fir',
             'pine',
-            , 'birch'
+            ,'birch'
         ]
     }
 ];
@@ -140,11 +140,4 @@ console.log(myPlants);
 var secondTree = myPlants[1].list[1];
 console.log(secondTree);
 
-//While Loop
-var myArray = [];
-var i=0;
-while (i < 5) {
-    myArray.push(i);
-    i++;
-}
-console.log(myArray);
+//Record Collection
