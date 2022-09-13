@@ -132,7 +132,7 @@ var myPlants = [
         list: [
             'fir',
             'pine',
-            ,'birch'
+            , 'birch'
         ]
     }
 ];
@@ -140,4 +140,27 @@ console.log(myPlants);
 var secondTree = myPlants[1].list[1];
 console.log(secondTree);
 
-//Record Collection
+//While Loop
+var myArray = [];
+var i = 0;
+while (i < 5) {
+    myArray.push(i);
+    i++;
+}
+console.log(myArray);
+
+//For loop
+myArray = [];
+// console.log(myArray);
+for (i = 0; i < 5; i++) {
+    myArray.push(i + 1);
+}
+console.log(myArray);
+myArray = [];
+
+//Iterate odd numbers with a for loop
+for (i = 0; i < 10; i+=2) {
+    myArray.push(i);
+}
+console.log(myArray);
+myArray = [];
