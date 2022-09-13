@@ -368,7 +368,7 @@ const squareList = (arr) => {
 const squaredIntegers = squareList(realNumberArray);
 console.log(squaredIntegers);
 
-//Default parameters
+//Default parameters //Need to study well 
 const increment = (function () {
     return function increment(number, value = 0) {
         return number + value;
@@ -376,3 +376,21 @@ const increment = (function () {
 })();
 console.log(increment(5, 9));
 console.log(increment(5));
+
+//Use the Rest Operator with function parameters
+const sum = (function () {
+    return function sum(...args) {
+        // const args = [x, y, z];
+        return args.reduce((a, b) => a + b, 0);
+    };
+})();
+console.log(sum(1,2,3,4,5));
+
+//Use the Spread Operator to evaluate arrays in-place
+const arr1 = ['JAN','FEB','MAR','APR','MAY'];
+let arr2;
+(function(){
+    arr2=[...arr1];
+    arr1[0]='potato';
+})();
+console.log(arr2,arr1);
