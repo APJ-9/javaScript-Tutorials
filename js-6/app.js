@@ -222,3 +222,8 @@ function ourRandomRangeNumber(ourMin, ourMax) {
 console.log(ourRandomRangeNumber(2,15));
 
 //Use the parseInt function
+function convertToInteger(str){
+    return parseInt(str);
+}
+console.log(convertToInteger('56'));
+//convert string to integer
