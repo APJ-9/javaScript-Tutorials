@@ -203,8 +203,22 @@ do {
     myArray.push(i);
     i++;
 } while (i < 5)
-console.log(i,myArray);
+console.log(i, myArray);
 //According to the logic the array must be empty since i is greater then 5 but here we use do ... while loop the loop executes once so that the array gets the value
 
 //Generate Random Fractions
 console.log(Math.random());
+
+//Generate random whole numbers
+console.log(Math.floor(Math.random() * 10 + 1));
+//here we get random numbers from 1 to 10 
+//when we only use multiply we get numbers from 0 to 9
+
+//Generate random whole number within a range
+function ourRandomRangeNumber(ourMin, ourMax) {
+    return Math.floor(Math.random() * (ourMax - ourMin + 1)) + ourMin;
+}
+
+console.log(ourRandomRangeNumber(2,15));
+
+//Use the parseInt function
