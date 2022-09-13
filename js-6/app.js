@@ -159,8 +159,25 @@ console.log(myArray);
 myArray = [];
 
 //Iterate odd numbers with a for loop
-for (i = 0; i < 10; i+=2) {
+for (i = 1; i < 10; i += 2) {
+    myArray.push(i);
+    //when i = 0 prints even numbers
+}
+console.log(myArray);
+myArray = [];
+
+//count backwards with a for loop
+for (i = 10; i > 0; i -= 2) {
     myArray.push(i);
 }
 console.log(myArray);
 myArray = [];
+
+//Iterate through an array with a for loop
+var ourArray = [9, 10, 11, 12];
+var ourTotal = 0;
+for (var j = 0; j < ourArray.length; i++) {
+    ourTotal += ourArray[i];
+}
+console.log(ourTotal);
+console.log('hello');
