@@ -248,6 +248,12 @@ function checkSign(num) {
 }
 console.log(checkSign(10));
 
+
+//we can use let and const to declare variables
+//const --> read only variable
+//Use capital letters for naming when using const so that we can easily understand that it is a constant and cant be change
+
+
 //Scope of a variable using let and var
 function checkScope() {
     "use strict";
@@ -278,7 +284,7 @@ checkScope1();
 
 function checkScope2() {
     "use strict";
-    // let cs2 = 'function scope';
+    // let cs2 = 'function scope';//the variable i is used before so that using variable i is not a good way.
     if (true) {
         let cs2 = 'block scope';
         console.log('inside block: '+cs2);
@@ -289,3 +295,16 @@ function checkScope2() {
 //   return cs2;
 }
 checkScope2();
+
+const S = [5,7,2];
+function editInPlace(){
+    // S = [2,5,7]; //We can not change it like this insted of that we use
+    S[0]=2;
+    S[1]=5;
+    S[2]=7;
+}
+console.log(S);
+editInPlace();
+console.log(S);
+
+//Prevent Object Mutation
