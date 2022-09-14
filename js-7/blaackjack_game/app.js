@@ -11,7 +11,7 @@ let cardDisplay = document.getElementById('cards-el');
 
 let player = {
     name: 'ABC',
-    chips: 145
+    chips: 200
 }
 
 let playerDisplay = document.getElementById('player-el');
