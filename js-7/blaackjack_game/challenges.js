@@ -31,5 +31,16 @@ let featuredPost = [
     'I have just relaunched my protfolio'
 ];
 
-let per = ['Akhil',35,'pizza'];
+let per = ['Akhil', 35, 'pizza'];
 console.log(per);
+
+//Challenge -4 Logical Operators
+let hasSolvedChallenge = false;
+let hasHintsLeft = false;
+
+if (hasSolvedChallenge === false && hasHintsLeft === false) {
+    showSolution();
+}
+function showSolution() {
+    console.log("Showing the solution");
+}
