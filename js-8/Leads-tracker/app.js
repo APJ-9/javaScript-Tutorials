@@ -1,13 +1,25 @@
-let myLeads = [];
+let myLeads = ['abc'];
+// myLeads.push('def');
+// myLeads = JSON.stringify(myLeads);
+// console.log(typeof(myLeads),myLeads);
 const inputEl = document.getElementById('input-el');
 const ulEl = document.getElementById('ul-el');
 const inputBtn = document.getElementById('input-btn');
+
+// localStorage.setItem("myName","Akhil P Jose");
+// console.log(localStorage.getItem("myName"));
+// localStorage.clear();
+
 inputBtn.addEventListener('click', function () {
 
     let myData = inputEl.value;
     myLeads.push(myData);
-    console.log(myLeads);
+    // console.log(myLeads);
+    // console.log(typeof(myData));
+    localStorage.setItem('myLeads', JSON.stringify(myLeads));
     renderLeads();
+    let leadsFromLocalStorage = (localStorage.getItem("myLeads"));
+
     inputEl.value = '';
 })
 
